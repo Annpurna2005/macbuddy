@@ -1,0 +1,51 @@
+[
+     {
+       "category": "Health Food",
+       "name": "Prescription Diet",
+       "price": "32.80",
+       "image": "https://placehold.co/400"
+     },
+     {
+       "category": "Accessories",
+       "name": "Flavor Dental Chews",
+       "price": "25.37",
+       "image": "https://placehold.co/400"
+     },
+     {
+       "category": "Grooming",
+       "name": "Natural Dog Wax",
+       "price": "14.90",
+       "image": "https://placehold.co/400"
+     },
+     {
+       "category": "Grooming",
+       "name": "Hair Shedding Edge",
+       "price": "36.45",
+       "image": "https://placehold.co/400"
+     },
+     {
+      "category": "Health Food",
+      "name": "Prescription Diet",
+      "price": "32.80",
+      "image": "https://placehold.co/400"
+    },
+    {
+      "category": "Accessories",
+      "name": "Flavor Dental Chews",
+      "price": "25.37",
+      "image": "https://placehold.co/400"
+    },
+    {
+      "category": "Grooming",
+      "name": "Natural Dog Wax",
+      "price": "14.90",
+      "image": "https://placehold.co/400"
+    },
+    {
+      "category": "Grooming",
+      "name": "Hair Shedding Edge",
+      "price": "36.45",
+      "image": "https://placehold.co/400"
+    }
+   ]
+   

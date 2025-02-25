@@ -1,0 +1,88 @@
+const petData = {
+    dogs: [
+      { name: "Golden Retriever", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0gcUu-D8ElLcFw0TZSvCdBasqs4rG_YesHQm9Rw269lUZeRMN-dPzVZ9VH82U9Ji8OC3XHBke75d21Coy7Cho4Q" },
+      { name: "German Shepherd", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH8JH02RLW5Ae0VMP8w5dk1IX8oHfrBFON--9TmAy980UGyY1E5ID9snvAUQZrs4UNOgY_qCNFVjipzXFWF4UtXQ" },
+      { name: "Labrador", image: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTeCip28hMPQyQcsh808NZPXxrM0nXqx1oigPD8X6bNM6vjEO6Hviy8czJAAStz9qscXj-EdZaKjKm_75O_Z91FIw" },
+    ],
+    cats: [
+      { name: "Persian Cat", image: "https://d3544la1u8djza.cloudfront.net/APHI/Blog/2016/10_October/persians/Persian+Cat+Facts+History+Personality+and+Care+_+ASPCA+Pet+Health+Insurance+_+white+Persian+cat+resting+on+a+brown+sofa-min.jpg" },
+      { name: "Maine Coon", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkXXIo9_tjg_bsNX9lij3G39cSUB4Tm25QoagHCFIm3UQB1vWnFl_gPBMxn4ekPpnh5mxDzY7Vo_A1WwycCKqqLg" },
+      { name: "Siamese Cat", image: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRXXa3kjj1GcP_cowvEMEXTC95wibezcin_9eI2LI4DofpCrkiOMOx5nAFMQskusysPiyYta5EhT5wz4XHmw8iPnQ" },
+    ],
+    food: {
+      dog: {
+        food1: { name: "Premium Dog Food", image: "https://headsupfortails.com/cdn/shop/files/8906002480449_2.jpg?v=1738409894" },
+        food2: { name: "Organic Dog Meal", image: "https://media.gettyimages.com/id/165907425/photo/dog-food.jpg?s=612x612&w=gi&k=20&c=w4NtYD_1ry0J8I87voqOqWoC8421qxE5hA5QkV8Hoe4=" },
+        food3: { name: "Grain-Free Dog Kibble", image: "https://headsupfortails.com/cdn/shop/files/8906125484324.jpg?v=1714642044&width=1946" }
+      },
+      cat: {
+        food1: { name: "Healthy Cat Food", image: "https://www.orangepet.in/cdn/shop/products/KitCatPremiumCatFoodClassic32Front.jpg?v=1655885345" },
+        food2: { name: "Gourmet Cat Treats", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKskRELntZem5U5IrpyKyUxeuldC-EjVIOOQ&s" },
+        food3: { name: "Salmon Delight Cat Meal", image: "https://www.luvin.in/cdn/shop/files/LUVIN-Premium-Cat-Food1_859ede8e-2b6e-49f0-b250-87703dea2e95.jpg?v=1706077859&width=800" }
+      }
+    },
+  };
+  
+  import React from "react";
+  
+  const PetShop = () => {
+    return (
+      <div className="p-8 bg-gray-100 min-h-screen">
+        <h1 className="text-4xl font-bold text-center text-orange-500 mb-8">
+          Welcome to Our Pet Shop
+        </h1>
+  
+        {/* Dogs Section */}
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold text-orange-500 mb-4">Dog Breeds</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {petData.dogs.map((dog, index) => (
+              <div key={index} className="bg-white p-4 rounded-lg shadow-lg text-center">
+                <img src={dog.image} alt={dog.name} className="w-32 h-32 mx-auto rounded-lg" />
+                <p className="mt-2 text-lg font-semibold">{dog.name}</p>
+                <p className="text-green-600 font-semibold">Available</p>
+              </div>
+            ))}
+          </div>
+        </div>
+  
+        {/* Cats Section */}
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold text-orange-500 mb-4">Cat Breeds</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {petData.cats.map((cat, index) => (
+              <div key={index} className="bg-white p-4 rounded-lg shadow-lg text-center">
+                <img src={cat.image} alt={cat.name} className="w-32 h-32 mx-auto rounded-lg" />
+                <p className="mt-2 text-lg font-semibold">{cat.name}</p>
+                <p className="text-green-600 font-semibold">Available</p>
+              </div>
+            ))}
+          </div>
+        </div>
+  
+        {/* Pet Food Section */}
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold text-orange-500 mb-4">Pet Food</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {Object.values(petData.food.dog).map((dogFood, index) => (
+              <div key={index} className="bg-white p-4 rounded-lg shadow-lg text-center">
+                <img src={dogFood.image} alt={dogFood.name} className="w-32 h-32 mx-auto rounded-lg" />
+                <p className="mt-2 text-lg font-semibold">{dogFood.name}</p>
+                <p className="text-green-600 font-semibold">Available</p>
+              </div>
+            ))}
+            {Object.values(petData.food.cat).map((catFood, index) => (
+              <div key={index} className="bg-white p-4 rounded-lg shadow-lg text-center">
+                <img src={catFood.image} alt={catFood.name} className="w-32 h-32 mx-auto rounded-lg" />
+                <p className="mt-2 text-lg font-semibold">{catFood.name}</p>
+                <p className="text-green-600 font-semibold">Available</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  };
+  
+  export default PetShop;
+  
