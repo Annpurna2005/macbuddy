@@ -10,6 +10,7 @@ import Shop from './Pages/Shop';
 import Cartpage from './Pages/Cartpage';
 import { CartProvider } from './Components/CartContext';
 import PetShop from './Components/PetShop';
+import AdminPetShop from './Components/AdminPetShop';
 
 
 
@@ -40,6 +41,7 @@ const App = () => {
         <Route path="/shop" element={<Shop />} />
         <Route path="/cart" element={<Cartpage />} />
         <Route path="/pets" element={<PetShop />} />
+        <Route path="/petShop" element={<AdminPetShop />} />
     </Routes>
     </Router>
     </CartProvider>
