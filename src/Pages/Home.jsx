@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import PetCareSlider from '../Components/PetCareSlider'
 import WelcomeSection from '../Components/WelcomSection'
 import ServicesSection from '../Components/ServicesSection'
@@ -13,7 +13,15 @@ import EventsSection from '../Components/EventsSection'
 import Footer from '../Components/Footer'
 
 function Home() {
+  useEffect(() => {
+    document.title = "Home";
+  }, []);
+ 
+
   return (
+    
+    
+  
     <>
   
     <PetCareSlider />

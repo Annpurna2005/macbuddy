@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect }  from 'react'
 import PageHeader from '../Components/PageHeader '
 import WelcomeSection from '../Components/WelcomSection'
 import ServicesSection from '../Components/ServicesSection'
@@ -9,6 +9,9 @@ import NewsletterSubscription from '../Components/NewsletterSubscription '
 import Footer from '../Components/Footer'
 
 function About() {
+  useEffect(() => {
+      document.title = "About";
+    }, []);
   return (
     <div className="pt-26">
 

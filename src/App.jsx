@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState , useEffect} from 'react'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from './Components/Navbar';
 import Home from './Pages/Home';
@@ -12,7 +12,25 @@ import { CartProvider } from './Components/CartContext';
 import PetShop from './Components/PetShop';
 import AdminPetShop from './Components/AdminPetShop';
 
+const DynamicTitle = () => {
+  const location = useLocation();
 
+  useEffect(() => {
+    const routeTitles = {
+      "/": "Home - Mac Buddy",
+      "/about": "About - Mac Buddy",
+      "/services": "Services - Mac Buddy",
+      "/blog": "Blog - Mac Buddy",
+      "/contact": "Contact - Mac Buddy",
+      "/shop": "Shop - Mac Buddy",
+      "/cart": "Cart - Mac Buddy",
+    };
+
+    document.title = routeTitles[location.pathname] || "Mac Buddy";
+  }, [location]);
+
+  return null;
+};
 
 
 const App = () => {
