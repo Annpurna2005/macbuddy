@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState , useEffect  } from "react";
 
 const petData = {
   dogs: [
@@ -25,6 +25,8 @@ const petData = {
   }
 };
 
+
+
 const AdminPetShop = () => {
   const [availability, setAvailability] = useState({});
 
@@ -35,6 +37,9 @@ const AdminPetShop = () => {
     }));
   };
 
+  useEffect(() => {
+    document.title = "PetShop";
+  }, []);
   return (
     <div className="p-8 bg-gray-100 min-h-screen">
       <h1 className="text-4xl font-bold text-center text-orange-500 mb-8">

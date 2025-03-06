@@ -23,9 +23,13 @@ const petData = {
     },
   };
   
-  import React from "react";
+  import React, { useEffect } from "react";
+
   
   const PetShop = () => {
+    useEffect(() => {
+      document.title = "Pet";
+    }, []);
     return (
       <div className="p-8 bg-gray-100 min-h-screen">
         <h1 className="text-4xl font-bold text-center text-orange-500 mb-8">

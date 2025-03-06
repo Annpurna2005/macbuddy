@@ -24,6 +24,8 @@ const DynamicTitle = () => {
       "/contact": "Contact - Mac Buddy",
       "/shop": "Shop - Mac Buddy",
       "/cart": "Cart - Mac Buddy",
+      "/pets": "Pet Shop - Mac Buddy",
+      "/petShop": "Admin Pet Shop - Mac Buddy",
     };
 
     document.title = routeTitles[location.pathname] || "Mac Buddy";
